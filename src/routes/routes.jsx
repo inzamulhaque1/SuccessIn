@@ -7,12 +7,13 @@ import AboutPage from "../pages/About/AboutPage";
 import LoginPage from "../pages/Auth/LoginPage";
 import SignupPage from "../pages/Auth/SignupPage";
 import NewsletterPage from "../pages/Newsletter/NewsletterPage";
+import NewsletterDetailsPage from "../pages/Newsletter/NewsletterDetailsPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement:<ErrorPage></ErrorPage>,
+    // errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
       {
         path: "newsletters",
         element: <NewsletterPage></NewsletterPage>,
+      },
+      {
+        path: "newsletters-details",
+        element: <NewsletterDetailsPage></NewsletterDetailsPage>,
       },
 
     ],
